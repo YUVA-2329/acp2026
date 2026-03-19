@@ -1,0 +1,13 @@
+Starting program: D:\OneDrive\Desktop\ACP\acp2026\level1\demo1.exe 
+[New Thread 16860.0x41b0]
+[Thread 16860.0x41b0 exited with code 0]
+[Inferior 1 (process 16860) exited normally]
+The program is not being run.
+The program is not being run.
+The program is not being run.
+No symbol "max" in current context.
+No symbol "max_index" in current context.
+The program is not being run.
+Warning: 'set logging off', an alias for the command 'set logging enabled', is deprecated.
+Use 'set logging enabled off'.
+

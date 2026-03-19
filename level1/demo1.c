@@ -24,9 +24,8 @@ void input(int n, float arr[n]){
     int i=0;
     for(i=0;i<n;i++){
     printf(
-        "ENTER THE ELEMNT IN THE ARRAY OF THE INDEX %d",arr[i]
-    );
-    scanf("%d",&arr[i]);
+        "ENTER THE ELEMENT IN THE ARRAY OF THE INDEX %d  ",i);
+    scanf("%f",&arr[i]);
 }
 }
 int find_max_index(int n, float arr[n]){
