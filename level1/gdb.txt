@@ -11,3 +11,11 @@ The program is not being run.
 Warning: 'set logging off', an alias for the command 'set logging enabled', is deprecated.
 Use 'set logging enabled off'.
 
+Starting program: D:\OneDrive\Desktop\ACP\acp2026\level1\demo2.exe 
+[New Thread 8832.0x3100]
+[Thread 8832.0x3100 exited with code 0]
+[Inferior 1 (process 8832) exited normally]
+Undefined command: "85".  Try "help".
+Warning: 'set logging off', an alias for the command 'set logging enabled', is deprecated.
+Use 'set logging enabled off'.
+
