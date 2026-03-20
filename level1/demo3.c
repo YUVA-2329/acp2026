@@ -43,9 +43,10 @@ int main(){
 void input(int n, Rectangle rects[n]){
     int i=0;
     for(i=0;i<n;i++){
-    printf("ENTER THE LENGTH");
+printf("ENTER THE DETAILS OF %d RECTANGLE",i);
+    printf("ENTER THE LENGTH   ");
     scanf("%f",&rects[i].length);
-    printf("ENTER THE WIDTH");
+    printf("ENTER THE WIDTH   ");
     scanf("%f",&rects[i].width);
 }
 }
@@ -67,5 +68,5 @@ void calculate_area(int n,Rectangle rects[]){
  }
 void output(int largest, Rectangle rects[]){
 
-    printf("THE %d RECTANGLE WITH LARGEST AREA of %d",&largest+1,&rects[largest].area);
+    printf("THE %d RECTANGLE WITH LARGEST AREA of %d  ",largest+1,rects[largest].area);
 }
