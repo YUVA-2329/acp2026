@@ -1,74 +1,65 @@
-/*Write a C program to check if the user qualifies 
-for a free unit consumption scheme using functions and structure.
-
-Example: If consumption is less than 50 units, the bill is ₹0. (if statement)
-
+/*Write a C program to calculate electricity bills for multiple consumers using array of structures and functions and display the highest bill. (array of structures, for loop, if statement)
 typedef struct {
-
-int units;
-
-float rate;
-
-float total_bill;
-
-} ElectricityBill;
-
+    	int consumerID;
+    	float unitsConsumed;
+    	float billAmount;
+} Bill;
 Function Prototypes:
-
-ElectricityBill input();
-
-ElectricityBill calculate_bill(ElectricityBill bill);
-
-               void output(ElectricityBill bill);*/
+void input(int n, Bill bills[n]);
+void calculate_Bills(int n, Bill bills[n]);
+int findHighestBillIndex(int n, Bill bills[n]);
+void displayHighestBill(int index, Bill bills[]);
+*/
 #include <stdio.h>
-
 typedef struct {
+    	int consumerID;
+    	float unitsconsumed;
+    	float totalbill;
+} Bill;
 
-int units;
-
-float rate;
-
-float total_bill;
-
-} ElectricityBill;
-
-ElectricityBill input();
-
-ElectricityBill calculate_bill(ElectricityBill bill);
-void output(ElectricityBill bill);
+void input(int n, Bill bills[n]);
+void calculate_Bills(int n, Bill bills[n]);
+int findHighestBillIndex(int n, Bill bills[n]);
+void displayHighestBill(int index, Bill bills[]);
 int main(){
-   ElectricityBill bill;
-   bill=input();
-   bill=calculate_bill( bill);
-   output( bill);
-
+	int n=0;
+	printf("ENTERR THE NUMBER OF CUSTOMERS");
+	scanf("%d",&n);
+    Bill bills[n];
+	input(n,bills);
+	calculate_Bills(n,bills);
+	int index;
+	index=findHighestBillIndex(n,bills);
+	displayHighestBill(index,bills);
 
 }
-ElectricityBill input(){
-    ElectricityBill bill;
-    printf("ENTER THE UNITS CONSUMED\n");
-    scanf("%d",&bill.units);
-    printf("ENTER THE RATE PER UNIT\n");
-    scanf("%f",&bill.rate);
-    return bill;
-
-    
+void input(int n, Bill bills[n]){
+int i=0;
+for(i=0;i<n;i++){
+printf("ENTER THE CONUSUMER NUMBER");
+scanf("%d",&bills[i].consumerID);
+printf("ENTER THE UNITS CONSUMED");
+scanf("%f",&bills[i].unitsconsumed);
+bills[i].totalbill=bills[i].unitsconsumed*10;
 }
-ElectricityBill calculate_bill(ElectricityBill bill){
-    if(bill.units<=50){
-        printf("THE NUMBER OF UNITS CONSUMED IS LESS THAN 50 AND IS ELIGIBLE FOR FREE SCHEME");
-    bill.total_bill=0;}
-    else{
-
-        bill.total_bill=bill.units*bill.rate;
-
-    
-    }
-    return bill;
 }
+void calculate_Bills(int n, Bill bills[n]){
+	int i=0;
+	for(i=0;i<n;i++){
+	bills[i].totalbill=bills[i].unitsconsumed*10;
+	}
+}
+int findHighestBillIndex(int n, Bill bills[n]){
+	float max=bills[0].totalbill;
+	int index=0;
 
-void output(ElectricityBill bill) {
-    printf("\nUnits Consumed: %d\n", bill.units);
-    printf("Rate per Unit: %.2f\n", bill.rate);
-    printf("Total Bill: %.2f\n", bill.total_bill);
+	int i=0;
+	for(i=0;i<n;i++){
+		if(bills[i].totalbill>max)
+		index=i;
+	}
+}
+void displayHighestBill(int index, Bill bills[]){
+	printf("THE HIGHEST BILL IS DONE BY \n CONSUMER ID : %d \n UNITS CONSUMED: %f \n TOTAL BILL : %f ", bills[index].consumerID,bills[index].unitsconsumed,bills[index].totalbill)
+;
 }
