@@ -1,0 +1,6 @@
+Error creating process D:\OneDrive\Desktop\ACP\acp2026\level1\demo3.exe (error 4551): An Application Control policy has blocked this file.
+No stack.
+[New Thread 3868.0x3008]
+[Thread 3868.0x3008 exited with code 0]
+[Inferior 1 (process 3868) exited normally]
+No stack.

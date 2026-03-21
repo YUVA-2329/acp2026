@@ -1,0 +1,8 @@
+Error creating process D:\OneDrive\Desktop\ACP\acp2026\level1\demo4.exe (error 4551): An Application Control policy has blocked this file.
+No stack.
+[New Thread 9756.0x3cd4]
+[Thread 9756.0x3cd4 exited with code 0]
+[New Thread 9756.0x1d78]
+[Thread 9756.0x1d78 exited with code 0]
+[Inferior 1 (process 9756) exited normally]
+No stack.
