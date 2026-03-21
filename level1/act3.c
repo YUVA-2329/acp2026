@@ -23,7 +23,7 @@ int findHighestBillIndex(int n, Bill bills[n]);
 void displayHighestBill(int index, Bill bills[]);
 int main(){
 	int n=0;
-	printf("ENTERR THE NUMBER OF CUSTOMERS");
+	printf("ENTERR THE NUMBER OF CUSTOMERS \n");
 	scanf("%d",&n);
     Bill bills[n];
 	input(n,bills);
@@ -31,14 +31,15 @@ int main(){
 	int index;
 	index=findHighestBillIndex(n,bills);
 	displayHighestBill(index,bills);
+return 0;
 
 }
 void input(int n, Bill bills[n]){
 int i=0;
 for(i=0;i<n;i++){
-printf("ENTER THE CONUSUMER NUMBER");
+printf("ENTER THE CONUSUMER NUMBER\n");
 scanf("%d",&bills[i].consumerID);
-printf("ENTER THE UNITS CONSUMED");
+printf("ENTER THE UNITS CONSUMED\n");
 scanf("%f",&bills[i].unitsconsumed);
 bills[i].totalbill=bills[i].unitsconsumed*10;
 }
@@ -58,6 +59,7 @@ int findHighestBillIndex(int n, Bill bills[n]){
 		if(bills[i].totalbill>max)
 		index=i;
 	}
+	return index;
 }
 void displayHighestBill(int index, Bill bills[]){
 	printf("THE HIGHEST BILL IS DONE BY \n CONSUMER ID : %d \n UNITS CONSUMED: %f \n TOTAL BILL : %f ", bills[index].consumerID,bills[index].unitsconsumed,bills[index].totalbill)
