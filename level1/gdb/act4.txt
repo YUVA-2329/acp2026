@@ -1,0 +1,2 @@
+Error creating process D:\ACP\acp2026\level1\act4.exe (error 4551): An Application Control policy has blocked this file.
+No stack.

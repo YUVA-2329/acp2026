@@ -1,0 +1,4 @@
+[New Thread 8832.0x1d80]
+[Thread 8832.0x1d80 exited with code 0]
+[Inferior 1 (process 8832) exited normally]
+No stack.

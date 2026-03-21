@@ -1,0 +1,4 @@
+[New Thread 10784.0x1590]
+[Thread 10784.0x1590 exited with code 0]
+[Inferior 1 (process 10784) exited normally]
+No stack.
