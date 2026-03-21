@@ -19,3 +19,8 @@ Undefined command: "85".  Try "help".
 Warning: 'set logging off', an alias for the command 'set logging enabled', is deprecated.
 Use 'set logging enabled off'.
 
+Starting program: D:\OneDrive\Desktop\ACP\acp2026\level1\act1.exe 
+[New Thread 9608.0x3940]
+[Thread 9608.0x3940 exited with code 0]
+[Inferior 1 (process 9608) exited normally]
+No stack.

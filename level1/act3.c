@@ -38,31 +38,33 @@ ElectricityBill calculate_bill(ElectricityBill bill);
 void output(ElectricityBill bill);
 int main(){
    ElectricityBill bill;
-   input();
-   calculate_bill( bill);
+   bill=input();
+   bill=calculate_bill( bill);
    output( bill);
 
 
 }
 ElectricityBill input(){
-    ElectricityBill  bill;
-    printf("ENTER THE UNITS CONSUMED");
-    scanf("%d",bill.units);
-     printf("ENTER THE RATE PER UNIT");
-    scanf("%f",bill.rate);
+    ElectricityBill bill;
+    printf("ENTER THE UNITS CONSUMED\n");
+    scanf("%d",&bill.units);
+    printf("ENTER THE RATE PER UNIT\n");
+    scanf("%f",&bill.rate);
     return bill;
 
     
 }
 ElectricityBill calculate_bill(ElectricityBill bill){
     if(bill.units<=50){
-        printf("THE NUMBER OF UNITS CONSUMED IS LESS THAN 50 AND IS ELIGIBLE FOR FREE SCHEME");}
+        printf("THE NUMBER OF UNITS CONSUMED IS LESS THAN 50 AND IS ELIGIBLE FOR FREE SCHEME");
+    bill.total_bill=0;}
     else{
 
         bill.total_bill=bill.units*bill.rate;
 
     
     }
+    return bill;
 }
 
 void output(ElectricityBill bill) {
