@@ -40,12 +40,21 @@ void inputStrings(char str1[], char str2[]) {
     printf("Enter second string:\n");
     fgets(str2,100,stdin);
     // Write code to read both strings
+      str1[strcspn(str1, "\n")] = '\0';
+    str2[strcspn(str2, "\n")] = '\0';
 }
 
 int compareStrings(char str1[], char str2[]) {
     // Write code to compare two strings and return 0, 1, or -1
     int n=strcmp(str1,str2);
-    return n;
+    if(n==0)
+    return 0;
+    else if(n>0)
+    return 1;
+    else
+
+
+    return -1;
 }
 
 void output(int result) {
