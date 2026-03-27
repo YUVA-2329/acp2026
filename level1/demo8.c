@@ -15,9 +15,9 @@ int main(){
    char str1[100] ;
    char str2[100];
    
-   printf("ENTER FIRST STRING");
+   printf("ENTER FIRST STRING    ");
    input(str1);
-   printf("ENTER SECOND STRING");
+   printf("ENTER SECOND STRING   ");
    input(str2);
    concatenate_strings(str1,str2);
    display(str1);
@@ -35,6 +35,6 @@ void concatenate_strings(char *str1, char *str2){
     
 }
 void display(char *str){
-  printf("%s",str);
+  printf("%s ",str);
 
 }
