@@ -14,13 +14,14 @@ void count(char *str, int *vowels, int *consonants);
 void display(char *str, int vowels, int consonants);
 
 int main() {
-    char str[100];          
+    char str[100];            
     int vowels = 0;
     int consonants = 0;
 
     printf("ENTER THE STRING: ");
     input(str);
 
+    
     count(str, &vowels, &consonants);
 
     display(str, vowels, consonants);

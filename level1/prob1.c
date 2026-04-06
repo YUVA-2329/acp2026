@@ -1,10 +1,8 @@
-/*strings from the user*/
-//#include <string.h>
-//#inlude
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-void sort_array(char **str,int count);
+
+void sort_array(char **str, int count);
 
 int main() {
     char **str = NULL;
@@ -20,11 +18,9 @@ int main() {
         }
 
         str = (char**) realloc(str, (count + 1) * sizeof(char*));
-
         str[count] = (char*) malloc((strlen(temp) + 1) * sizeof(char));
 
         strcpy(str[count], temp);
-
         count++;
     }
 
@@ -33,16 +29,15 @@ int main() {
         printf("%s\n", str[i]);
     }
 
-    for(int i = 0; i < count; i++) {
-        free(str[i]);
-    }
-    free(str);
-    sort_array(str,count);
-    printf("SORTED ARRAY \n");
+    // ✅ Sort BEFORE freeing
+    sort_array(str, count);
+
+    printf("\nSORTED ARRAY:\n");
     for(int i = 0; i < count; i++) {
         printf("%s\n", str[i]);
     }
 
+    // ✅ Free memory only once
     for(int i = 0; i < count; i++) {
         free(str[i]);
     }
@@ -50,14 +45,14 @@ int main() {
 
     return 0;
 }
-void sort_array(char **str,int count){
-    int i,j=0;
-    for(i=0;i<count-1;i++){
-        for(j=i+1;j<count;j++){
-            if(strcmp(str[i],str[j])>0){
-                char *temp=str[i];
-                str[j]=str[j];
-                str[j]=temp;
+
+void sort_array(char **str, int count) {
+    for(int i = 0; i < count - 1; i++) {
+        for(int j = i + 1; j < count; j++) {
+            if(strcmp(str[i], str[j]) > 0) {
+                char *temp = str[i];
+                str[i] = str[j];
+                str[j] = temp;
             }
         }
     }

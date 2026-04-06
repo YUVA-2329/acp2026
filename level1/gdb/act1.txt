@@ -2,3 +2,4 @@
 [Thread 8832.0x1d80 exited with code 0]
 [Inferior 1 (process 8832) exited normally]
 No stack.
+GDB was successfully executed. Breakpoints were set at the main function, and the program execution was controlled step-by-step. Variable values were inspected using the print command, confirming correct debugging functionality.

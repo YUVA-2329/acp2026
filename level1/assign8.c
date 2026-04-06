@@ -12,6 +12,7 @@ void display(char *str, int res);
 */
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 void input(char *str);
 int is_valid(char *str);
 int is_upper(char c); // Sub function of is_valid()
@@ -20,13 +21,30 @@ int is_digit(char c); // Sub function of is_valid()
 void display(char *str, int res);
 int main(){
     printf("enter the password");
-    char *str;
+    char str[100];
     input(str);
    int res= is_valid(str);
     display(str,res);
 }
 void input(char *str){
     scanf("%[^\n]",str);
+}
+int is_valid(char *str){
+
+    if(strlen(str)<8)
+    return 0;
+    else{
+        int upper,lower,digit=0;
+        for(int i=0;str[i]!='\0';i++){
+            if(is_upper(str[i])) upper=1;
+            if(is_lower(str[i])) lower=1;
+            if(is_digit(str[i])) digit=1;
+
+        }
+        return upper 
+
+
+    }
 }
 
 
